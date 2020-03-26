@@ -80,8 +80,7 @@ collections:
     wiki:
         output: true
         permalink: /wiki/:path/
-
-repository:xlfeima/xlfeima.github.io
+repository: xlfeima/xlfeima.github.io
 
 # ---------------- #
 #      Comments    #

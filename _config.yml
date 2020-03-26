@@ -1,7 +1,7 @@
 # Hexo Configuration
 ## Docs: http://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
-
+theme: yilia
 # Site
 title: Litten的博客
 subtitle: 胆小认生，不易相处

@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:https://pegasusxu.com
+baseurl: pegasusxu.com
 url:https://pegasusxu.com
 date_format: "ordinal"
 title: 码志

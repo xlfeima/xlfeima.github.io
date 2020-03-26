@@ -95,14 +95,14 @@ disqus:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: xlfeima
-    repo: blog-comments
+    repo: xlfeima.github.io
     oauth:
         client_id: 3f635d44cabf556d15c4
         client_secret: a091a680a280a87528d4109d10b28052922e4804
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: xlfeima
-    repo: blog-comments
+    repo: xlfeima.github.io
     clientID: 3f635d44cabf556d15c4
     clientSecret: a091a680a280a87528d4109d10b28052922e4804
 # 在使用其它评论组件时可点击显示 Disqus

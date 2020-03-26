@@ -1,8 +1,8 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: 
-url:https://pegasusxu.com
+baseurl:
+url: https://pegasusxu.com
 date_format: "ordinal"
 title: 码志
 subtitle: "公众号：闷骚的程序员"

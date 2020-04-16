@@ -68,9 +68,9 @@ dotnet tool install -g FreeSql.Generator
 
 #### 三.創建一個文件夾,cmd 進入該文件夾 執行生成命令
 
-![](images\blog\Freesql\cmdfreesql.PNG)
+![](/images/blog/Freesql/cmdfreesql.PNG)
 
 #### 四.在該目錄下查看生成的實體類
 
-![](images\blog\Freesql\Models.PNG)
+![](/images/blog/Freesql/Models.PNG)
 

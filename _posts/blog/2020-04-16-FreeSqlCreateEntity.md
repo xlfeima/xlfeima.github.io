@@ -4,6 +4,7 @@ title: .NET 開發利用FreeSql自動生成實體類
 categories: [.netcore]
 description: 利用FreeSql自動生成實體類
 keywords: netcore, 自動生成
+typora-root-url: ..\..
 ---
 
 ### 使用 FreeSql 快速生成数据库的实体类
@@ -67,9 +68,9 @@ dotnet tool install -g FreeSql.Generator
 
 #### 三.創建一個文件夾,cmd 進入該文件夾 執行生成命令
 
-![](E:\github\xlfeima.github.io\images\blog\Freesql\cmdfreesql.PNG)
+![](images\blog\Freesql\cmdfreesql.PNG)
 
 #### 四.在該目錄下查看生成的實體類
 
-![](E:\github\xlfeima.github.io\images\blog\Freesql\Models.PNG)
+![](images\blog\Freesql\Models.PNG)
 

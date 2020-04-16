@@ -1,7 +1,7 @@
 ---
 layout: post
 title: .NET 開發利用FreeSql自動生成實體類
-categories: [.netcore]
+categories: [.NetCore]
 description: 利用FreeSql自動生成實體類
 keywords: netcore, 自動生成
 typora-root-url: ..\..

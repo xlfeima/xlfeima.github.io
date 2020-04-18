@@ -26,9 +26,7 @@ RestSharp是一个轻量的，不依赖任何第三方的组件或者类库的Ht
 ## HealthCheck
 
 报告外部依赖项的健康状况  .NetCore
-
 AspNetCore.Diagnostics.HealthChecks
-
 程序运行需要内存， cpu，需要磁盘空间， 现在的网站更是依赖于各种各样的第三方系统， 比如：数据库， 缓存等等。这些东西如果不正常，我们的网站也不可能正常运行。好消息是， ASPNetCore提供了大量的辅助类型，来提供这些系统是否正常：
 
 ```

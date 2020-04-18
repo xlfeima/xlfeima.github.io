@@ -10,16 +10,16 @@ keywords: Nuget
 
 RestSharp是一个轻量的，不依赖任何第三方的组件或者类库的Http的组件。RestSharp具体以下特性；
 
-1、[支持.NET](http://xn--ruu81c.net/) 3.5+,Silverlight 4, Windows Phone 7, Mono, MonoTouch, Mono for Android, Compact Framework 3.5等
-　　2、通过NuGet方便引入到任何项目 ( Install-Package restsharp )
-　　3、可以自动反序列化XML和JSON
-　　4、支持自定义的序列化与反序列化
-　　5、自动检测返回的内容类型
-　　6、支持HTTP的GET, POST, PUT, HEAD, OPTIONS, DELETE等操作
-　　7、可以上传多文件
-　　8、支持oAuth 1, oAuth 2, Basic, NTLM and Parameter-based Authenticators等授权验证等
-　　9、支持异步操作
-　　10、极易上手并应用到任何项目中
+1. [支持.NET](http://xn--ruu81c.net/) 3.5+,Silverlight 4, Windows Phone 7, Mono, MonoTouch, Mono for Android, Compact Framework 3.5等
+2. 通过NuGet方便引入到任何项目 ( Install-Package restsharp )
+3. 可以自动反序列化XML和JSON
+4. 支持自定义的序列化与反序列化
+5. 自动检测返回的内容类型
+6. 支持HTTP的GET, POST, PUT, HEAD, OPTIONS, DELETE等操作
+7. 可以上传多文件
+8. 支持oAuth 1, oAuth 2, Basic, NTLM and Parameter-based Authenticators等授权验证等
+9. 支持异步操作
+10. 极易上手并应用到任何项目中
 
 以上是RestSharp的主要特点，通用它你可以很容易地用程序来处理一系列的网络请求（GET, POST, PUT, HEAD, OPTIONS, DELETE），并得到返回结果
 

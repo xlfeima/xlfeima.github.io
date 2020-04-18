@@ -23,7 +23,7 @@ RestSharp是一个轻量的，不依赖任何第三方的组件或者类库的Ht
 
 以上是RestSharp的主要特点，通用它你可以很容易地用程序来处理一系列的网络请求（GET, POST, PUT, HEAD, OPTIONS, DELETE），并得到返回结果
 
-# HealthCheck
+## HealthCheck
 
 ### 报告外部依赖项的健康状况  .NetCore
 

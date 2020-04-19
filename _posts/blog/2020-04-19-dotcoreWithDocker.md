@@ -1,11 +1,15 @@
 ---
 layout: post
-title: 使用VsCode通过Docker发布.NetCore项目
+title: 通过Docker发布.NetCore项目
 categories: [Docker, NetCore]
-description: 使用VsCode通过Docker发布.NetCore项目
+description:通过Docker发布.NetCore项目
 keywords: Docker, NetCore
 typora-root-url: ..\..
 ---
+
+最近学习了一下容器相关知识，学习之前觉得应该挺难，学完之后 感觉容器部署真方便，真好用。
+
+ [Docker官方文档](https://docs.docker.com/)
 
 ## Docker相关命令
 

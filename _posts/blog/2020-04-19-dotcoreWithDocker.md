@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 通过 Docker 发布 .NetCore 项目
-categories: [Docker,NetCore]
+categories: [Docker,.NetCore]
 description: 通过 Docker 发布 .NetCore 项目
 keywords: Docker,NetCore
 typora-root-url: ..\..

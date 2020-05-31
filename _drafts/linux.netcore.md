@@ -1,0 +1,144 @@
+---
+layout: post
+title: .NETCORE LINUX 发布
+categories: [cate1, cate2]
+description: some word here
+keywords: keyword1, keyword2
+---
+
+
+
+参考文章 ：<https://www.cnblogs.com/liuxiaoji/p/9907984.html>
+
+LINUX 与 NETCORE
+
+1.创建文件夹
+
+```
+mkdir wwwroot
+```
+
+
+
+1. 解压到指定目录
+
+```
+unzip -o netcore.zip -d /home/wwwroot/dashboard
+```
+
+上传完毕后，需要先通过`cd`命令进入网站根目录`/home/wwwroot`，再输入如下命令启动网站程序
+
+```
+dotnet Chart.dll
+```
+
+看是否启动成功
+
+## Nginx配置反向代理
+
+[Nginx](http://nginx.org/)是一个高性能的Web服务器软件。这是一个比 Apache HTTP Server 更加灵活和轻量级的程序。
+
+我们的网站程序启动的端口是`5000`，可以借助 Nginx 把程序`5000`端口映射到`80`端口。
+
+[Nginx官方文档](http://nginx.org/en/docs/) & [Nginx开发从入门到精通 - Tengine](http://tengine.taobao.org/book/index.html)
+
+### 安装 Nginx
+
+首先，我们需要在服务器上安装 Nginx。
+
+ 
+
+**Step1：添加 Nginx 存储库**
+
+要添加 CentOS 7 EPEL 仓库，请打开终端并使用以下命令：
+
+```
+sudo yum install epel-release
+```
+
+**Step2：安装 Nginx**
+
+ 
+
+现在 Nginx 存储库已经安装在您的服务器上，请使用以下`yum`命令安装 Nginx：
+
+```
+sudo yum install nginx
+```
+
+**Step3：启动 Nginx**
+
+Nginx 不会自行启动。要运行 Nginx，请输入：
+
+```
+sudo systemctl start nginx
+```
+
+如果您正在运行防火墙，请运行以下命令以允许 HTTP 和 HTTPS 通信：
+
+ 
+
+```
+sudo firewall-cmd --permanent --zone=public --add-service=http 
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload
+```
+
+此时，可以在本机的浏览器中访问服务器的 IP 地址`http://97.64.40.217/`来验证 Nginx 是否成功运行。
+
+如果能看到 Nginx 的默认转发网页则说明一切正常。如下截图：
+
+如果拒绝访问，考虑服务器`80`端口是否开放。可尝试通过下面两条命令开放`80`端口、重启防火墙使修改即时生效。
+
+ 
+
+```
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+systemctl restart firewalld
+```
+
+### 设置 Nginx 开机启动
+
+避免开机需要手动开启 Nginx，可以通过如下快捷命令把 Nginx 配置成系统服务，并设置为开机启动：
+
+```
+systemctl enable nginx  #设置开机启动
+```
+
+其他命令：
+
+ 
+
+```
+systemctl disable nginx   #禁止开机启动
+systemctl status nginx     #查看运行状态
+systemctl restart nginx    #重启服务
+```
+
+### 修改 Nginx 配置文件
+
+首先，拿到 Nginx 的默认配置文件`/etc/nginx/nginx.conf`，把默认`80`端口转发配置`server`节点用`#`符注释掉。
+
+然后，我们新建一个配置文件`netcore.conf`，内容如下：
+
+
+
+```
+server {
+    listen 80;
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection keep-alive;
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+
+
+保存并上传到 Nginx 的配置加载目录`/etc/nginx/conf.d`，最后执行命令`nginx -s reload`重载 Nginx 配置，使其生效。
+
+在本地浏览器上访问服务器地址，运行结果如下：

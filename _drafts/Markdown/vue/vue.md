@@ -1,3 +1,7 @@
+---
+typora-root-url: ..
+---
+
 ### 环境
 
 1.  安装 vue
@@ -191,4 +195,8 @@ export default {
 </style>
 
 ```
+
+8.父组件像子组件传参，子组件像父组件传参
+
+![](/image/子父组件.png)
 

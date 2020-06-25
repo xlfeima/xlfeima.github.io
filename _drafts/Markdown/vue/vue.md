@@ -200,3 +200,10 @@ export default {
 
 ![](/image/子父组件.png)
 
+​    子组件传参父组件2
+
+​    采取发射的方式 
+
+在子组件中  this.$emit(“键”，“值”)
+
+在父组件中，子组件的标签中  @键=“msg:$event”   其中 $event就能得到值，msg是父组件中的 vue属性

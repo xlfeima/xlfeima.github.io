@@ -6,6 +6,8 @@ description: some word here
 keywords: keyword1, keyword2
 ---
 
+最近在B站看到一个比较有趣的视频，炫酷的展示了你git 上面的工作过程，询问后了解到 Gource这款工具
+
 **Gource**是一款版本控制可视化的工具，使用这个工具可以将自己的**Git**提交的代码包括对**Mercurial**，**Bazaar**和**SVN**的内置日志生成可视化支持。**Gource**还可以解析由多个第三方工具为**CVS**存储库生成的日志。 提交的代码按照时间轴的顺序动态显示出来，可以使你的工作过程以动画的形式显现，并且**Gource**这个工具可以显示出来不同用户对一个代码库进行同一时间内的修改操作。
 
 **官方网站：**<https://gource.io/>。
@@ -90,7 +92,7 @@ PATH可以是受支持的版本控制目录，日志文件，Gource配置文件�
 脚本
 
 ```
-gource  -s 1 -t 1 -o 1.mp4  C:\Users\XL\Desktop\Blog\xlfeima.github.io
+gource  -s 1 -t 2  -r 60 -o 1.mp4  C:\Users\XL\Desktop\Blog\xlfeima.github.io
 ```
 
 <video id="video" controls="" preload="none" poster="https://img-blog.csdnimg.cn/2019110817503031.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE5NTUxMg==,size_16,color_FFFFFF,t_70">

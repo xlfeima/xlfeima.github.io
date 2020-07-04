@@ -207,3 +207,21 @@ export default {
 在子组件中  this.$emit(“键”，“值”)
 
 在父组件中，子组件的标签中  @键=“msg:$event”   其中 $event就能得到值，msg是父组件中的 vue属性
+
+
+
+
+
+Linux
+
+vue 发布
+
+npm run build
+
+解压
+
+unzip dist.zip -d /home/www
+
+
+
+chmod -R 777 /home/www/

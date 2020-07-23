@@ -142,3 +142,30 @@ server {
 保存并上传到 Nginx 的配置加载目录`/etc/nginx/conf.d`，最后执行命令`nginx -s reload`重载 Nginx 配置，使其生效。
 
 在本地浏览器上访问服务器地址，运行结果如下：
+
+### 查看端口 释放端口
+
+**1.查找被占用的端口**
+
+1. netstat -tln
+2. netstat -tln | grep 8080
+
+ netstat -tln 查看端口使用情况，而netstat -tln | grep 8080则是只查看端口8080的使用情况
+
+ 
+
+**2.查看端口属于哪个程序？端口被哪个进程占用**
+
+lsof -i:8060
+
+ COMMAND   PID   USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+
+Java    20804   root   36u  IPv6 35452317      0t0  TCP *:pcsync-https (LISTEN)
+
+ 
+
+**3.杀掉占用端口的进程  根据pid杀掉
+
+kill -9 进程id  
+
+kill -9 20804

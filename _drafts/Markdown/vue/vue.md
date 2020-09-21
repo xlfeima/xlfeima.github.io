@@ -220,8 +220,12 @@ npm run build
 
 解压
 
+<<<<<<< HEAD
 unzip dist.zip -d /home/www
 
 
 
 chmod -R 777 /home/www/
+=======
+unzip dist.zip -d/home/www
+>>>>>>> b0a7d7bcd3034438c6099322bd5b967e437f98eb
